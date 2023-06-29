@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .form {
+    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 750px;
+  height: 400px;
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  left: 20%;
+  top: 10%;
+}
+
+.gradient{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        background-color:hsla(0,100%,50%,1);
+        background-image:
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+        radial-gradient(at 84% 14%, hsla(189,100%,56%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 49%, hsla(340,100%,76%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    }
+
+.message {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+.flex2 {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.input01 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 5px;
+}
+
+.form label .input01 + span {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input01:placeholder-shown + span {
+  top: 40px;
+  font-size: 0.9em;
+}
+
+.form label .input01:focus + span,.form label .input01:valid + span {
+  top: 50px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input01:valid + span {
+  color: green;
+}
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #cacaca;
+  border-radius: 0px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 390;
+  letter-spacing: 2px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 8px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy2 {
+  background-color: transparent;
+  border: 2px solid #cacaca;
+  border-radius: 0px;
+  box-sizing: border-box;
+  color: #eb5050;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 390;
+  letter-spacing: 2px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 8px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.7rem;
+  height: 2px;
+  background: #cacaca;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform: translateX(230%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #818181;
+  transform: translateX(30%);
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: white;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: #cacaca;
+}
+
+.fancy:hover::before {
+  width: 1.5rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+  
+
+  
+}
+</style>
+<style>
+#bottone5 {
+ align-items: center;
+ background-color: #FFFFFF;
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ border-radius: .25rem;
+ box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+ box-sizing: border-box;
+ color: rgba(0, 0, 0, 0.85);
+ cursor: pointer;
+ display: inline-flex;
+ font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ font-size: 16px;
+ font-weight: 600;
+ justify-content: center;
+ line-height: 1.25;
+ min-height: 3rem;
+ padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+ text-decoration: none;
+ transition: all 250ms;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ vertical-align: baseline;
+ width: auto;
+}
+
+#bottone5:hover,
+#bottone5:focus {
+ border-color: rgba(0, 0, 0, 0.15);
+ box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+ color: rgba(0, 0, 0, 0.65);
+}
+
+#bottone5:hover {
+ transform: translateY(-1px);
+}
+
+#bottone5:active {
+ background-color: #F0F0F1;
+ border-color: rgba(0, 0, 0, 0.15);
+ box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+ color: rgba(0, 0, 0, 0.65);
+ transform: translateY(0);
+}
+</style>
+<body class="gradient">
+
+    <div class="form">
+        <h1 >Banco</h1>
+        <h3>Olá, {{pessoa.nome}}</h3>
+
+        <div class="flex">
+
+                <label for="deposit">Depósito:</label>
+                <input type="number" id="deposit">
+                <button id="deposit-btn" id="bottone5">Depositar</button>
+            
+                <label for="withdraw">Saque:</label>
+                <input type="number" id="withdraw">
+                <button id="withdraw-btn"class="bottone5">Sacar</button>
+            
+        </div>
+
+        <div class="row">
+            <label for="balance">Saldo:</label>
+            <span id="balance-text"></span>
+        </div>
+
+        <div class="row">
+            <button onclick="showAlert()"class="bottone5">Finalizar</button>
+        </div>
+
+    </div>
+
+    <script>
+        const nameInput = document.getElementById('name');
+        const balanceInput = document.getElementById('balance');
+        const depositInput = document.getElementById('deposit');
+        const depositBtn = document.getElementById('deposit-btn');
+        const withdrawInput = document.getElementById('withdraw');
+        const withdrawBtn = document.getElementById('withdraw-btn');
+        const balanceText = document.getElementById('balance-text');
+        const finalizar = document.getElementById('finalizar-btn');
+
+        let balance = 0;
+
+        function updateBalance() {
+        balanceText.innerText = `R$ ${balance.toFixed(2)}`;
+        }
+
+        function deposit() {
+        const amount = parseFloat(depositInput.value);
+        if (!isNaN(amount)) {
+        balance += amount;
+        updateBalance();
+        depositInput.value = '';
+        }
+        }
+
+        function withdraw() {
+        const amount = parseFloat(withdrawInput.value);
+        if (!isNaN(amount) && balance >= amount) {
+        balance -= amount;
+        updateBalance();
+        withdrawInput.value = '';
+        } else{
+            alert('O valor solicitado para retirada é maior que o disponível no momento.');
+            updateBalance();
+            withdrawInput.value = '';
+        }
+        }
+
+        function showAlert() {
+            alert("Aviso: A operação foi finalizada com sucesso!!");
+            nameInput.value = '';
+            withdrawInput.value = '';
+            balanceInput.value = '';
+            depositInput.value = '';
+        }
+
+        depositBtn.addEventListener('click', deposit);
+        withdrawBtn.addEventListener('click', withdraw);
+
+        nameInput.addEventListener('input', () => {
+        const name = nameInput.value.trim();
+        if (name.length > 0) {
+        document.title = `${name} - Banco`;
+        }
+        });
+
+        balanceInput.addEventListener('input', () => {
+        const value = parseFloat(balanceInput.value);
+        if (!isNaN(value)) {
+        balance = value;
+        updateBalance();
+        }
+        });
+
+        updateBalance();
+ 
+    </script>
+
+</body>
+
+</html>
