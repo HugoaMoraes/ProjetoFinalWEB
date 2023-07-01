@@ -27,4 +27,4 @@ A falta de integração com as demais tabelas do banco não deixou o projeto com
 a proxima versão vai trazer essas melhorias.
 Porém o sistema de login está funcionando conforme o template.
 E a implementação da area de transferencia está funcionando apenas a logica.
-Atualizações por vim...
+Atualizações por vim...Teste
